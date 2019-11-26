@@ -1,0 +1,21 @@
+body
+{
+    background-color: rgb(89, 86, 69);
+    color: white;
+}
+h1,h3
+{
+    color: rgb(89, 131, 182);
+}
+h3
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+.special
+{
+    color:yellow;
+}
+#IMDB>li>a
+{
+    color:lightcoral;
+}
