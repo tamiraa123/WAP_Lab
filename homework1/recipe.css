@@ -1,0 +1,52 @@
+body
+{
+    font-size: 11pt;   
+    font-family: Georgia, Garamond;
+    background-color: white;
+    background-image: url("images/silverware.jpg");
+}
+h1,h2
+{
+    color: #A4A400;
+    background-color: #F0F0F0;
+    text-decoration: underline;
+    font-size: 18pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+h1
+{
+    text-align: center;
+    font-size: 22pt;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  } 
+pre
+{
+    font-family: monospace;
+}
+.comment
+{
+    background-color: lightyellow;
+    font-style: italic;
+}
