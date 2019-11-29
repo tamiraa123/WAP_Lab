@@ -11,8 +11,8 @@ body
     border:solid;
     border-color: grey;
     border-radius: 10pt;
-    width: 68%;
-    
+    width: 800px;
+    padding-bottom: 0px;
 }
 #leftborder
 {
@@ -86,3 +86,14 @@ dd
 {
     opacity: 50%;
 }
+#bottom
+{
+    background-color: #A2B964;  
+    text-align: center;
+    clear: both;
+    margin: 0;
+    padding: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
