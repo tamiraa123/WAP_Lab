@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="nerdluv.css" type="text/css" rel="stylesheet" />
+    <title>Sign up</title>
+</head>
+<body>
+    <header>
+        <img src="images/nerdluv.png" alt="banner logo" /> <br />
+        where meek geeks meet
+    </header>
+    <div>
+        <h1>Welcome!</h1>
+    
+        <ul>
+            <li>
+                <a href="signup.php">
+                    <img src="http://www.cs.washington.edu/education/courses/cse190m/12sp/homework/4/signup.gif" alt="icon" />
+                    Sign up for a new account
+                </a>
+            </li>
+            
+            <li>
+                <a href="matches.php">
+                    <img src="http://www.cs.washington.edu/education/courses/cse190m/12sp/homework/4/heartbig.gif" alt="icon" />
+                    Check your matches
+                </a>
+            </li>
+        </ul>
+    </div>
+    <form>
+    <fieldset>
+        <legend> New User Signup: </legend>    
+        <table>
+                <tr>
+                    <td><b>Name:</b></td>
+                    <td>
+                        <input type="text" name="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Gender:</b></td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female" checked>Female
+                    </td>
+                </tr>
+                <tr>
+                    <td> <b>Age:</b></td>
+                    <td><input type="text" name="eta" maxlength="2" size="6" /></td>
+                </tr>
+                <tr>
+                        <td> <b>Personality type:</b></td>
+                        <td><input type="text" name="pt" maxlength="4" size="6"/>
+                            <a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp"> (Don't know your type?)</a></td>
+                </tr>
+                <tr>
+                    <td><b>Favorite OS:</b></td>
+                    <td>
+                        <select name="sistema">
+                            <option value="linux" selected="selected">Linux</option>
+                            <option value="windows">Windows</option>
+                            <option value="macosx">Mac OS X</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Seeking age:</b></td>
+                    <td>
+                        <input type="text" name="seek1" maxlength="2" size="6" placeholder="20" /> to
+                        <input type="text" name="seek2" maxlength="2" size="6" placeholder="45" />
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            <input type="submit" value="Sign Up">
+                        </td>
+                        <td></td>
+                    </tr>
+         
+        </table>
+    </fieldset>
+</form>
+<br/>
+<span>
+		<a href="https://validator.w3.org/check?uri=referer">
+			<img class="w3" src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png"
+			alt="html validator"/> </a>
+	
+		<a  class="w3" href="https://jigsaw.w3.org/css-validator/check/referer">
+				 <img src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png"
+				alt="css validator"/> </a>
+		</span>
+</body>
+</html>
