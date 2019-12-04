@@ -14,19 +14,19 @@
         <li>2. What is a servlet?</li>
         <li>A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. </li>
         <li>3. How do web servers and web containers interact with servlets?</li>
-        <li></li>
+        <li>When someone says “web server” you often think HTTP-centric, web UI oriented applications. When someone says “Application server” you may think “heavier loads, enterprise features, transactions and queuing, multi-channel communication (HTTP + more)”. But mostly it is the same product that serves both sets of requirements now-a-days.</li>
         <li>4. Who creates request objects?</li>
-        <li></li>
+        <li>Service</li>
         <li>5. What are the states in the servlet lifecycle?</li>
-        <li></li>
+        <li>The entire life cycle of a Servlet is managed by the Servlet container which uses the javax.servlet.Servlet interface to understand the Servlet object and manage it.</li>
         <li>6. Who calls init and when?</li>
-        <li></li>
+        <li>The servlet is initialized by calling the init() method</li>
         <li>7. Which of init, service, and doGet should you override?</li>
-        <li></li>
+        <li>Service method should not be overridden otherwise developer is responsible for consequences.</li>
         <li>8. In what sense are servlets multi-threaded?</li>
-        <li></li>
+        <li>A Java servlet container / web server is typically multithreaded.</li>
         <li>9. What are the implications of this for servlet instance variables?</li>
-        <li></li>
+        <li>The container does not create a new instance of the Servlet class for each request. It reuses an existing one. This is why they are not thread safe.</li>
     </ul>      
 </body>
 </html>
