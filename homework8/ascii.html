@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="animations.js"></script>
+    <script src="ascii.js"></script>
+    <link href="ascii.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+   <h1> CSE 190 M ASCII Animation Viewer </h1>
+   <div>
+        <textarea id="maintext" rows="20" cols="80"> </textarea>
+   </div>
+  <div >
+        <fieldset class="controller">
+            <legend>Play controls:</legend>
+            <button id ="start"  onclick="gogogo();">start</button>
+            <button id ="stop" onclick="stop();" disabled>stop</button>
+        </fieldset >
+        <fieldset class="controller">
+                <legend>Animation:</legend>
+                <select id="dropdown">
+                    <option>Blank</option>
+                    <option>Exercise</option>
+                    <option>Juggler</option>
+                    <option>Bike</option>
+                    <option>Dive</option>
+                    <option>Custom</option>
+                </select>
+        </fieldset>
+        <fieldset class="controller">
+                <legend>Size:</legend>
+                <select id="dropdown1" onchange="dropdown1event()">
+                        <option>Tiny</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>Extra Large</option>
+                        <option>XXL</option>
+                    </select>
+        </fieldset>
+        <fieldset class="controller">
+                <legend>Speed:</legend>
+                <input type="checkbox"  id="myCheck" onclick="checkbox1()"> turbo<br>
+        </fieldset>
+    </div>
+    <a href="https://webster.cs.washington.edu/jslint/?referer">
+        <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+        </a>
+</body>
+</html>
