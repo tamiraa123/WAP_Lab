@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body data-gr-c-s-loaded="true">
+    <h1 id="javascript-review">Javascript Review</h1>
+    <h3 id="jquery-quiz-1">jQuery Quiz 1</h3>
+    <ol>
+    <li>In jQuery terminology, what is the difference between the "<code>jQuery function</code>" and the "<code>jQuery object</code>"?</li>
+    </ol>
+    <pre class="hljs"><code><div>-- Answer
+    The dollar sign with the parentheses is the shorter name of the jQuery function. This shortcut saves us from writing "jQuery()" every time we want to call the jQuery function. The jQuery function is also often referred to as the jQuery wrapper.
+    
+    A jQuery object is array-like which means that it contains zero or more indexes (properties which names are positive integers starting with zero). Besides those indexes, a jQuery object contains these properties: length. context. selector.
+    </div></code></pre>
+    <ol start="2">
+    <li>Write jQuery code to find all h1 elements that are children of a div element and make their background color red.
+    Sample HTML:</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>abc<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>div-1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>div-2<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>xyz<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">// Answer</span>
+    $(<span class="hljs-string">'div h1'</span>).css({<span class="hljs-string">'background'</span>: <span class="hljs-string">'red'</span>});
+    </div></code></pre>
+    <ol start="3">
+    <li>Use a jQuery method to insert the text "YES!" at the end of the <p> element.</p></li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">!—INSERT</span> <span class="hljs-attr">YOUR</span> <span class="hljs-attr">JQUERY</span> <span class="hljs-attr">CODE</span> <span class="hljs-attr">HERE</span> <span class="hljs-attr">-</span> <span class="hljs-attr">-</span> &gt;</span>
+    </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Is jQuery FUN or what? <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">// Answer</span>
+    $(<span class="hljs-string">'p'</span>).after(<span class="hljs-string">'&lt;span&gt;YES!&lt;/span&gt;'</span>);
+    </div></code></pre>
+    
+    
+    
+    </body>
+</html>

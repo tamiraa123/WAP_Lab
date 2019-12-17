@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body data-gr-c-s-loaded="true">
+    <h1 id="javascript-review">Javascript Review</h1>
+    
+    <h3 id="jquery-quiz-3">jQuery Quiz 3</h3>
+    <ol>
+    <li>Find the text in the first paragraph (stripping out the html), then set the html of the last paragraph to show it is just text (the red bold is gone).</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-meta">&lt;!doctype html&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>text demo<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+            <span class="hljs-selector-tag">p</span> {
+                <span class="hljs-attribute">color</span>: blue;
+                <span class="hljs-attribute">margin</span>: <span class="hljs-number">8px</span>;
+            }
+    
+            <span class="hljs-selector-tag">span</span> {
+                <span class="hljs-attribute">color</span>: red;
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://code.jquery.com/jquery-1.9.1.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"solve();"</span>&gt;</span>Click Me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">// &lt; !—INSERT YOUR JQUERY CODE HERE - - &gt;</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solve</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">const</span> elements = $(<span class="hljs-string">'p'</span>);
+            elements.last().text(elements.first().text());
+        }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+    </div></code></pre>
+    <ol start="2">
+    <li>Write jQuery code to create a red background for the level-2 list items.</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"level-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-i"</span>&gt;</span>I<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-ii"</span>&gt;</span>II
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"level-2"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-a"</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-b"</span>&gt;</span>B
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"level-3"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-2"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-3"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-c"</span>&gt;</span>C<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item-iii"</span>&gt;</span>III<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">// Answer</span>
+    $(<span class="hljs-string">'ul.level-2'</span>).children().css({ <span class="hljs-string">'background-color'</span>: <span class="hljs-string">'red'</span> });
+    </div></code></pre>
+    <ol start="3">
+    <li>Write jQuery code to select the element that comes immediately before item three and change its background color to blue.</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>list item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>list item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"third-item"</span>&gt;</span>list item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>list item 4<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>list item 5<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">// Answer</span>
+    $(<span class="hljs-string">'.third-item'</span>).prev().css({ <span class="hljs-string">'background-color'</span>: <span class="hljs-string">'blue'</span> });
+    </div></code></pre>
+    <ol start="4">
+    <li>Let us one additional requirement for the "Go Vegetarian" button of the Webville Eatery Menu described in Chapter 4 of Head First jQuery: "Turkey" in the ingredient list of any entree is replaced by "Mashed Potatoes" in the vegetarian version. You may assume there is a class "turkey" that identifies these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new requirement.</li>
+    </ol>
+    <pre class="hljs"><code><div>$(<span class="hljs-string">'.turkey'</span>).replaceWith(<span class="hljs-string">`&lt;li class="mashed"&gt;&lt;em&gt;Mashed Potatoes&lt;/em&gt;&lt;/li&gt;`</span>);
+    </div></code></pre>
+    <ol start="5">
+    <li>Write Javascript (jQuery) code to change the color of the parent and grandparent list items of the span of text ("some text") in the following to green.</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://code.jquery.com/jquery-1.9.1.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+            $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-comment">// &lt; !—INSERT YOUR JQUERY CODE HERE - - &gt;</span>
+                <span class="hljs-keyword">const</span> element = $(<span class="hljs-string">'span'</span>);
+                element.parent().css({<span class="hljs-string">'color'</span> : <span class="hljs-string">'green'</span>});
+                element.parent().parent().css({<span class="hljs-string">'color'</span> : <span class="hljs-string">'green'</span>});
+            });
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ancestors"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> (great-grandparent)
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span> (grandparent)
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> (direct parent)
+                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>some text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+    </div></code></pre>
+    
+    
+    
+    </body>
+</html>

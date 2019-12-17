@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body data-gr-c-s-loaded="true">
+    <h1 id="javascript-review">Javascript Review</h1>
+    
+    <h3 id="jquery-quiz-2">jQuery Quiz 2</h3>
+    <ol>
+    <li>Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if
+    they are. Explain why they can have different parameters and be equivalent, if they are equivalent.</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-comment">//code fragment 1</span>
+    $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">idx, e</span>) </span>{
+        $(e).css(<span class="hljs-string">"color"</span>, <span class="hljs-string">"yellow"</span>); });
+    <span class="hljs-comment">//code fragment 2</span>
+    $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">"color"</span>, <span class="hljs-string">"yellow"</span>); });
+    <span class="hljs-comment">//code fragment 3</span>
+    $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">idx</span>) </span>{
+        $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">"color"</span>, <span class="hljs-string">"yellow"</span>); });
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">// Answer</span>
+    <span class="hljs-comment">// These are equivalent</span>
+    <span class="hljs-comment">//code fragment 1</span>
+    $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">idx, e</span>) </span>{
+        $(e).css(<span class="hljs-string">"color"</span>, <span class="hljs-string">"yellow"</span>); });
+    <span class="hljs-comment">// In above code, idx is the index of the `li` element and `e` is the matched element, all `li` elements color is set to yellow.</span>
+    
+    <span class="hljs-comment">//code fragment 2</span>
+    $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">"color"</span>, <span class="hljs-string">"yellow"</span>); });
+    <span class="hljs-comment">// $(this) is the element which matched with jQuery search condition.</span>
+    
+    <span class="hljs-comment">//code fragment 3</span>
+    $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">idx</span>) </span>{
+        $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">"color"</span>, <span class="hljs-string">"yellow"</span>); });
+    <span class="hljs-comment">// $(this) is the element which matched with jQuery search condition and idx has not been used.</span>
+    </div></code></pre>
+    <ol start="2">
+    <li>Write a jQuery expression to find all divs on a page that include an unordered list in them, and make their text color be blue.</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>no ul here <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            This does contain a ul.
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>the first item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>the second item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">
+        <span class="hljs-comment">&lt;!-- INSERT YOUR JQUERY CODE HERE --&gt;</span>
+        </span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">// Answer</span>
+    $(<span class="hljs-string">'div:has(ul)'</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        $(<span class="hljs-keyword">this</span>).css({ <span class="hljs-string">'color'</span>:<span class="hljs-string">'blue'</span> });
+    });
+    </div></code></pre>
+    <ol start="3">
+    <li>Write jQuery code to append the following div element (and all of its contents) dynamically to the body element.</li>
+    </ol>
+    <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>JQuery Core<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">&lt;!--HTML: --&gt;</span>
+    <span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>JS Bin<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+    </div></code></pre>
+    <pre class="hljs"><code><div><span class="hljs-comment">// Answer</span>
+    $(<span class="hljs-string">'body'</span>).append(<span class="hljs-string">'&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;'</span>);
+    </div></code></pre>
+    
+    
+    
+    </body>
+</html>
